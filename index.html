@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
-<nav class="nav">
+
+  <nav class="nav">
     <div>
-        <h3>Shopping list</h3>
-        <p>Github</p>
-       <div class="register"><p>Register</p></div>
-       <div class="login"> <p>Login</p></div>
+      <h3>Shopping list</h3>
+      <p>Github</p>
+      <div class="register">
+        <p>Register</p>
+      </div>
+      <div class="login">
+        <p>Login</p>
+      </div>
     </div>
-</nav>
+  </nav>
 
 
 
-<!-- The Modal -->
-<div id="register-myModal" class="register-modal">
+  <!-- The Modal -->
+  <div id="register-myModal" class="register-modal">
 
     <!-- Modal content -->
     <div class="register-modal-content">
@@ -39,7 +45,7 @@
         <!-- <input type="submit" class="submit" id="pword" href="#" value="Register"> -->
       </form>
     </div>
-  
+
   </div>
 
 
@@ -55,11 +61,13 @@
         <input type="text" id="email-address" placeholder="Enter your email">
         <label>Password</label><br>
         <input type="text" id="pword" placeholder="Enter your Password">
-        <button class="submit">login</button>
+        <input type="submit" class="get-item" value="login">
+        <!-- <button class="submit">login</button> -->
+
         <!-- <input type="submit" class="submit" id="pword" href="#" value="Register"> -->
       </form>
     </div>
-  
+
   </div>
 
   <div id="shopping-myModal" class="shopping-modal">
@@ -71,21 +79,31 @@
       <hr>
       <form>
         <label>Item</label><br>
-        <input type="text" id="email-address" placeholder="Enter your shopping item">
-        <button class="addItem">Add Item</button>
+        <input type="text" id="shopping-item" placeholder="Enter your shopping item">
+        <button type="submit" class="addItem">Add Item</button>
         <!-- <input type="submit" class="submit" id="pword" href="#" value="Register"> -->
       </form>
     </div>
-  
+
   </div>
 
-  
-      <button id="adding">Add item</button>
-      <p id="testing">please work</p>
-  
+
+  <!-- <button id="adding">Add item</button> -->
+  <input type="submit" class="item-button" value="add-item">
+
+  <div class="container">
+    <ul id="class-list">
+      <!-- <li class="item">Item 1 <span class="close-item">x</span></li> -->
+      <!-- <li class="item">Item 2 <span class="close-item">&times;</span></li>
+      <li class="item">Item 3 <span class="close-item">&times;</span></li>
+      <li class="item">Item 4 <span class="close-item">&times;</span></li> -->
+    </ul>
+  </div>
 
 
 
-   <script src="main.js"></script>
+
+  <script src="main.js"></script>
 </body>
+
 </html>

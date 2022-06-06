@@ -225,3 +225,47 @@ input[type=submit] {
     text-decoration: none;
     cursor: pointer;
 }
+
+.item-button {
+    display: none;
+    margin: 15px 15px;
+}
+
+.container {
+    margin-top: 30px;
+}
+
+.container ul {
+    list-style-type: none;
+}
+
+.container ul li {
+    /* width: 700px; */
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid purple;
+    position: relative;
+    margin: 5px 0;
+    padding-left: 5px;
+}
+
+/* .close-item{
+    color: #aaaaaa;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    height: 10px;
+    width: 10px;
+} */
+
+ul li span{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    text-align: center;
+    background: rgb(231, 29, 29);
+    color: white;
+    font-family: -apple-system,  sans-serif;
+}

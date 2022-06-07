@@ -233,20 +233,31 @@ input[type=submit] {
 
 .container {
     margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
+
+
 
 .container ul {
     list-style-type: none;
 }
 
 .container ul li {
-    /* width: 700px; */
-    height: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 500px;
+    /* height: 50px; */
     line-height: 40px;
-    border: 1px solid purple;
-    position: relative;
-    margin: 5px 0;
-    padding-left: 5px;
+    background: #fff;
+    box-shadow: 0px 10px 20px 0px #0000001A;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    font-family: -apple-system,  sans-serif;
 }
 
 /* .close-item{
@@ -259,13 +270,17 @@ input[type=submit] {
     width: 10px;
 } */
 
-ul li span{
+/* ul li span{
     position: absolute;
     top: 0;
     right: 0;
     width: 50px;
     text-align: center;
-    background: rgb(231, 29, 29);
+    background: purple;
     color: white;
     font-family: -apple-system,  sans-serif;
+} */
+
+i{
+    color: red;
 }

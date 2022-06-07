@@ -5,7 +5,7 @@ const loginBtn = document.getElementsByClassName("login")[0];
 const closeBtn = document.getElementsByClassName("close")[0];
 const secondCloseBtn = document.getElementsByClassName("close2")[0];
 const thirdCloseBtn = document.getElementsByClassName("close3")[0];
-
+let claDyn = 0;
 registerBtn.addEventListener("click", () => {
   modal.style.display = "block";
 });
@@ -62,35 +62,46 @@ getItem.addEventListener("click", (e) => {
 itemBtn.addEventListener("click", (e) => {
   e.preventDefault();
   e.stopPropagation();
-  console.log("hey!");
   shoppingModal.style.display = "block";
 });
 
 const inputText = document.querySelector("#shopping-item");
-const myButton = document.querySelector('.addItem');
+const myButton = document.querySelector(".addItem");
 const list = document.querySelector(".container ul");
+const deleteElement = document.getElementsByClassName("delete");
 
-myButton.addEventListener('click', (e) => {
-  if(inputText.value != ""){
+myButton.addEventListener("click", (e) => {
+  if (inputText.value != "") {
     e.preventDefault();
-  //creating li
-    const myLi = document.createElement('li');
+    //creating li
+    const myLi = document.createElement("li");
     myLi.innerHTML = inputText.value;
     list.appendChild(myLi);
-  //creating span
-  const mySpan = document.createElement('span');
-  mySpan.innerHTML = 'x';
-  myLi.appendChild(mySpan);
+    //creating span
+    const myIcon = document.createElement("i");
+    myIcon.classList.add(...["fa", "fa-times", `${claDyn++}`]);
+    myIcon.style.cursor = "pointer";
+    myLi.appendChild(myIcon);
   }
+
+  //   const closeList = document.querySelector('i');
+  // for(let i=0; i<close.length; i++){
+  //   close[i].addEventListener('click', () =>{
+  //     close[i].parentElement.style.display = "none";
+  //     console.log("go")
+  //   })
+  // }
+
   inputText.value = "";
 });
 
-// const closeList = document.querySelectorAll('span');
+const myIcon = document.querySelector(".container");
 
+myIcon.addEventListener("click", (e) => {
+  console.log("jo", e);
+  list.removeChild(e.target.childNode[0]);
+});
 
-// for(let i = 0; i<closeList.length; i++){
-//   close[i].addEventListener('click', () => {
-//     close[i].parentElement.style.display = "none";
-//     console.log("work")
-//   })
-// }
+// list.addEventListener("click", (e) => {
+//   console.log(e);
+// });
